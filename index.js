@@ -1,3 +1,6 @@
+const fs = require('fs')
+const inquirer = require('inquirer')
+const generate = require('./utils/generateMarkdown.js')
 // array of questions for user
 const questions = [
     {
@@ -38,7 +41,7 @@ const questions = [
     {
         type: "input",
         name: "username",
-        message: "What is your project title?"
+        message: "What is your github username?"
     },
     {
         type: "input",
@@ -48,7 +51,9 @@ const questions = [
 ];
 
 // function to write README file
-function writeToFile(fileName, data) {
+async function writeToFile() {
+    const projectInfo = await inquirer.prompt(questions)
+    
 }
 
 // function to initialize program
