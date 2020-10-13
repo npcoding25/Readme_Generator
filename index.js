@@ -52,10 +52,30 @@ const questions = [
 
 // function to write README file
 async function writeToFile() {
-    const projectInfo = await inquirer.prompt(questions)
+    const projectInfo = await inquirer.prompt(questions,(err) => {
+        if (err) {
+            console.log(err)
+        }
+    })
+    
+    fs.writeFile("ReadMe.md", generate(projectInfo), (err) => {
+        if (err) {
+            console.log(err)
+        }
+    })
     
 }
 
+// async function writeToFile() {
+//     const projectInfo = await inquirer.prompt(questions)
+//     console.log(projectInfo)
+//     fs.writeFileAsync("README.md", generate(projectInfo), function(err) {
+//         if (err)
+//         throw err
+//     } )
+// }
+
+writeToFile()
 // function to initialize program
 function init() {
 
