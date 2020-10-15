@@ -36,7 +36,7 @@ const questions = [
     {
         type: "input",
         name: "tests",
-        message: "Write a test for other users here:"
+        message: "What command is needed to run a test?"
     },
     {
         type: "input",
@@ -52,34 +52,10 @@ const questions = [
 
 // function to write README file
 async function writeToFile() {
-    const projectInfo = await inquirer.prompt(questions,(err) => {
-        if (err) {
-            console.log(err)
-        }
-    })
-    
-    fs.writeFile("ReadMe.md", generate(projectInfo), (err) => {
-        if (err) {
-            console.log(err)
-        }
-    })
+    const projectInfo = await inquirer.prompt(questions, (err) => console.log(err))
+   
+    fs.writeFile("ReadMe.md", generate(projectInfo), (err) => console.log(err))
     
 }
-
-// async function writeToFile() {
-//     const projectInfo = await inquirer.prompt(questions)
-//     console.log(projectInfo)
-//     fs.writeFileAsync("README.md", generate(projectInfo), function(err) {
-//         if (err)
-//         throw err
-//     } )
-// }
 
 writeToFile()
-// function to initialize program
-function init() {
-
-}
-
-// function call to initialize program
-init();
