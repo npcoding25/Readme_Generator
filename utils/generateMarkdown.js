@@ -1,6 +1,6 @@
 // function to generate markdown for README
-function generateMarkdown(questions) {
-  return `# ${questions.title}
+function generateMarkdown(data) {
+  return `# ${data.title}
 
 ## Table of contents
 
@@ -14,37 +14,37 @@ function generateMarkdown(questions) {
 
 ## Description
 
-  ${questions.description}
+  ${data.description}
 
 ## Installation
 
-  ${questions.installation}
+  ${data.installation}
 
 ## Usage
 
-  ${questions.usage}
+  ${data.usage}
 
 ## License
 
-  ${questions.license}
+  ${data.license}
 
 ## Contributors
 
-  ${questions.contributors}
+  ${data.contributors}
 
 ## Tests
 
-  ${questions.tests}
+  ${data.tests}
 
 ## Questions
 
   If you would like to see more of my repos you can check out my github profile below:
   
-  [${questions.username}]("https://github.com/${questions.username})
+  [${data.username}]("https://github.com/${data.username})
   
   Or if you would like to ask me a question send an email to:
   
-  ${questions.email}
+  ${data.email}
 
 
 `;
