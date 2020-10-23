@@ -1,4 +1,4 @@
-# ajsd
+# Readme Generator
 
 ## Table of contents
 
@@ -12,15 +12,15 @@
 
 ## Description
 
-  asdf
+  This application generates a README using Javascript and Node.js in the terminal.
 
 ## Installation
 
-  asd
+  npm install inquirer
 
 ## Usage
 
-  fasd
+  Once the application is run with 'node index.js', the user is asked a series of questions regarding their project. When finished, it will generate the README.md file. The file will have sections for all the information along with a table of contents and link for their github.
 
 ## License
 
@@ -28,20 +28,23 @@
 
 ## Contributors
 
-  asdfas
+  Nathan Polomark
 
 ## Tests
 
-  asdf
+  No tests
 
 ## Questions
 
   If you would like to see more of my repos you can check out my github profile below:
   
-  [asdf]("https://github.com/asdf)
+  [npcoding25]("https://github.com/npcoding25)
   
   Or if you would like to ask me a question send an email to:
   
-  asdf
+  polomarkn@hotmail.com
+
+
+  ##### This readme was created by the readme generator
 
 

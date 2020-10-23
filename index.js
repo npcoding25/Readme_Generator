@@ -2,7 +2,7 @@ const fs = require('fs')
 const inquirer = require('inquirer')
 const generate = require('./utils/generateMarkdown.js')
 
-// array of questions for user
+// Array of questions for user
 const questions = [
     {
         type: "input",
@@ -17,7 +17,7 @@ const questions = [
     {
         type: "input",
         name: "installation",
-        message: "What steps are needed to install your project?"
+        message: "What do you need to install for your project?"
     },
     {
         type: "input",
@@ -65,9 +65,10 @@ async function writeToFile() {
     // Creating variable of answered questions and waiting for response
     const projectInfo = await inquirer.prompt(questions, (err) => console.log(err))
     
+    // Accessing answer to license question
     let badgeLicense = projectInfo.license
-    console.log("Initial license:", badgeLicense)
 
+    // Function to make a badge out of users choice
     function createBadge() {
         if( badgeLicense == 'MIT') {
             projectInfo.license = `![MIT License](https://img.shields.io/badge/license-MIT-green)`
@@ -92,14 +93,12 @@ async function writeToFile() {
         else if( badgeLicense == 'GPL(>=2)') {
             projectInfo.license = `![GPL(>=2) License](https://img.shields.io/badge/license-GPL(>=2)-blue)`
         }
-        console.log("After badge license:", projectInfo.license)
-    
     }
     createBadge()
     
     // Write file README using answered questions and template from generateMarkdown.js
     fs.writeFile("ReadMe.md", generate(projectInfo), (err) => console.log(err))
+    console.log("Success! Your README.md file was created!")
 }
-
 
 writeToFile()

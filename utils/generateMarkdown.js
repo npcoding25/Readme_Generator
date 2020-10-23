@@ -47,6 +47,9 @@ function generateMarkdown(data) {
   ${data.email}
 
 
+  ##### This readme was created by the readme generator
+
+
 `;
 }
 
