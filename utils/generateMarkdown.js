@@ -40,7 +40,7 @@ function generateMarkdown(data) {
 
   If you would like to see more of my repos you can check out my github profile below:
   
-  [${data.username}]("https://github.com/${data.username}")
+  [${data.username}](https://github.com/${data.username})
   
   Or if you would like to ask me a question send an email to:
   
