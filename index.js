@@ -97,7 +97,7 @@ async function writeToFile() {
     createBadge()
     
     // Write file README using answered questions and template from generateMarkdown.js
-    fs.writeFile("ReadMe.md", generate(projectInfo), (err) => console.log(err))
+    fs.writeFile("README.md", generate(projectInfo), (err) => console.log(err))
     console.log("Success! Your README.md file was created!")
 }
 

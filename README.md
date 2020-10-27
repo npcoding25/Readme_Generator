@@ -24,7 +24,7 @@
 
 ## License
 
-  ![MIT License](https://img.shields.io/badge/license-MIT-green)
+  ![GPL License](https://img.shields.io/badge/license-GPL-blue)
 
 ## Contributors
 
@@ -38,7 +38,7 @@
 
   If you would like to see more of my repos you can check out my github profile below:
   
-  [npcoding25]("https://github.com/npcoding25)
+  [npcoding25]("https://github.com/npcoding25")
   
   Or if you would like to ask me a question send an email to:
   
